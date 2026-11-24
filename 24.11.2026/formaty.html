@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatowanie</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="styl2.css">
+</head>
+<body>
+
+    <header id="baner">
+        <h1>Formatowanie dokumentów HTML</h1>
+    </header>
+
+    <section id="panele-gorne">
+        <section id="panel1">
+            <h2>Przykład listy - hobby</h2>
+            <ul>
+                <li>muzyka</li>
+                <li>turystyka
+                    <ol>
+                        <li>góry</li>
+                        <li>jeziora</li>
+                        <li>na rowerze</li>
+                    </ol>
+                </li>
+                <li>książki</li>
+            </ul>
+        </section>
+
+        <section id="panel2">
+            <h2>Przykład tabeli - rozkład dnia</h2>
+            <table>
+                <tr>
+                    <th>Pora dnia</th>
+                    <th>obowiązki</th>
+                </tr>
+                <tr>
+                    <td>rano</td>
+                    <td>szkoła</td>
+                </tr>
+                <tr>
+                    <td>południe</td>
+                    <td>zajęcia dodatkowe</td>
+                </tr>
+                <tr>
+                    <td>popołudnie</td>
+                    <td rowspan="2">moje hobby</td>
+                </tr>
+                <tr>
+                    <td>wieczór</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="panel3">
+            <img src="napisy.png" alt="technologia web">
+        </section>
+    </section>
+
+    <main id="panel-glowny">
+        <p>Podaj rozmiar tekstu w procentach: <input type="number" id="rozmiar" value="100" min="1"> %</p>
+
+        <p>
+            <select id="styl-czcionki" onchange="zastosujStyl()">
+                <option value="normal">prosty</option>
+                <option value="italic">kursywa</option>
+            </select>
+        </p>
+
+        <p>Jakim kolorem sformatować tekst? Wybierz przycisk</p>
+        <p>
+            <button type="button" id="btn-czerwony" onclick="formatuj('red')"></button>
+            <button type="button" id="btn-zielony" onclick="formatuj('green')"></button>
+            <button type="button" id="btn-niebieski" onclick="formatuj('blue')"></button>
+        </p>
+
+        <p id="tekst-przykladowy">To jest przykład paragrafu, który może być dowolnie formatowany przez Java Script</p>
+    </main>
+
+    <footer id="stopka">
+        <p><i>Formatowaniem tekstu zajmował się: Stańczyk</i></p>
+        <p><a href="https://formatowanie.pl/" target="_blank">Odwiedź także</a></p>
+    </footer>
+</body>
+</html>
